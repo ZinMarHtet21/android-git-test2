@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+
+        Button b = (Button)findViewById(R.id.loginBtn);
+        b.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"Click Login Button",Toast.LENGTH_LONG).show();
             }
         });
     }
